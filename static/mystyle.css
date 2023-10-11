@@ -1,0 +1,67 @@
+#container{
+  width: 80%;
+  margin: auto;
+}
+
+h1{
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+h2{
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+.bodytext{
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+ }
+
+.copyright{
+    color: black;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: normal;
+ }
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: orange;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: orange}
+
+.button:active {
+  background-color: orange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#banner{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
