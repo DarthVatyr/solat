@@ -5,19 +5,31 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- need to update this reference when it's moved to a hosting server-->
     <link rel='stylesheet' href='https://solat--jmriddleit.repl.co/static/bootstrap.min.css'>
+    <style>
+      table, th, td {border: 1px solid;text-align: left;padding: 5px;}
+      th {background-color: #04AA6D;color: white;}
+      tr:nth-child(even) {background-color: #f2f2f2;}
+      tr:hover {background-color: coral;}
+    </style>
     <title>SOLAT</title>
   </head>
   <body>
     <ul>
       <li><a href='/home'>Home</a></li>
-      <li><a href='/items'>Item Data</a></li>
+      <li><a href='/trade'>Trade Data</a></li>
       <li><a href='/locations'>Location Data</a></li>
       <li><a href='/calculators'>Calculators</a></li>
       <li><a href='/logout'>Logout</a></li>
     </ul>
 
     <div id='container'>
-      <h1>Welcome to the SOLAT Trade Info Page</h1>
+      <h1>Welcome to the SOLAT Item Info Page</h1>
+
+      <h3>Items:</h3>
+      {% for table in tables %}
+        <h6>{{table|safe}}</h6>
+      {% endfor %}
+     
       <p class='copyright'>
         SOLAT - Copyright 2023
       </p>

@@ -9,30 +9,27 @@
   </head>
   <body>
     <ul>
-      <li><a class='active' href='#home'>Home</a></li>
-      <li><a href='#trade'>Trade Data</a></li>
-      <li><a href='#items'>Item Data</a></li>
-      <li><a href='#locations'>Location Data</a></li>
-      <li><a href='#calculators'>Calculators</a></li>
+      <li><a href='/trade'>Trade Data</a></li>
+      <li><a href='/items'>Item Data</a></li>
+      <li><a href='/locations'>Location Data</a></li>
+      <li><a href='/calculators'>Calculators</a></li>
+      <li><a href='/logout'>Logout</a></li>
     </ul>
 
+    {% for mesg in get_flashed_messages() %}
+    <h3>{{ mesg }}</h3>
+    {% endfor %}
+    
     <div id='container'>
       <h1>Welcome to the SOLAT Subscriber Website</h1>
-      <!-- need to update this reference when it's moved to a hosting server-->
-      <img id='banner' src='https://solat--jmriddleit.repl.co/static/SOLATLOGO.png'>
-      <h2> What Can You Do Here?</h2>
-      <p>
-        We offer useful tools that are exclusively available to SOLAT subscribers. 
-        <!--need to add more information here-->
-      </p>
-      <h2> What Are These Tools?</h2>
-      <p>
-        Trade data, item data, location data, and calculators are available here.
-        <!--need to add information about what services we offer here-->
-      </p>
-      <p class='copyright'>
-        SOLAT - Copyright 2023
-      </p>
+
+      <h3>Posts:</h3>
+      {% for post in posts %}
+        <strong>Title:</strong> {{ post.title }}<br>
+        <strong>Post:</strong> {{ post.description}}<br>
+        <br>
+      {% endfor %}
+
     </div>
   </body>
 </html>

@@ -6,19 +6,28 @@
     <link href='https://solat--jmriddleit.repl.co/static/bootstrap.min.css' rel='stylesheet' media='screen'>
   </head>
   <body>
+
+    <ul>
+      <li><a href='/'>Welcome</a></li>
+    </ul>
+    {% for message in get_flashed_messages() %}
+      {{ message }}
+    {% endfor %}
     <div class='container'>
       <h1>Please login</h1>
       <br>
       <form action='' method='post'>
-        <input type='text' placeholder='Username' name='username' value='{{
-          request.form.username }}'>
-         <input type='password' placeholder='Password' name='password' value='{{
-          request.form.password }}'>
+        <input type='text' placeholder='Username' name='username' value='{{request.form.username }}'>
+         <input type='password' placeholder='Password' name='password' value='{{request.form.password }}'>
         <input class='btn btn-default' type='submit' value='Login'>
       </form>
       {% if error %}
         <p class='error'><strong>Error:</strong> {{ error }}
       {% endif %}
+
+        <p class='copyright'>
+          SOLAT - Copyright 2023
+        </p>
     </div>
   </body>
 </html>
